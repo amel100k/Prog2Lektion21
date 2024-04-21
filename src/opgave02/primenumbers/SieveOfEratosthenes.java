@@ -2,8 +2,6 @@ package opgave02.primenumbers;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class SieveOfEratosthenes {
     public void findPrimeNumbers(int n)
@@ -13,14 +11,14 @@ public class SieveOfEratosthenes {
         // initialize all entries it as true. A value in
         // prime[i] will finally be false if i is Not a
         // prime, else true.
-        boolean prime[] = new boolean[n + 1];
+        boolean[] prime = new boolean[n + 1];
         for (int i = 0; i <= n; i++)
             prime[i] = true;
 
         for (int p = 2; p * p <= n; p++) {
             // If prime[p] is not changed, then it is a
             // prime
-            if (prime[p] == true) {
+            if (prime[p]) {
                 // Update all multiples of p greater than or
                 // equal to the square of it numbers which
                 // are multiple of p and are less than p^2
@@ -32,10 +30,9 @@ public class SieveOfEratosthenes {
 
         // Print all prime numbers
         for (int i = n - 100; i <= n; i++) {
-            if (prime[i] == true)
+            if (prime[i])
                 System.out.print(i + " ");
         }
-        double end = LocalDateTime.now().getNano();
         System.out.println();
         Instant finish = Instant.now();
         System.out.println(Duration.between(start, finish).toMillis() + " ms.");
