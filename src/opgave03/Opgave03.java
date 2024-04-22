@@ -1,9 +1,6 @@
 package opgave03;
 
-import opgave03.models.vehicles.Car;
-import opgave03.models.vehicles.CarType;
-import opgave03.models.vehicles.Motorcycle;
-import opgave03.models.vehicles.Vehicle;
+import opgave03.models.vehicles.*;
 
 import java.util.List;
 
