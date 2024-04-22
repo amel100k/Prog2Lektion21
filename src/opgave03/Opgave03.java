@@ -1,5 +1,6 @@
 package opgave03;
 
+import opgave03.models.decorator.Rental;
 import opgave03.models.vehicles.*;
 
 import java.util.List;
@@ -13,7 +14,8 @@ public class Opgave03 {
                 new Motorcycle("Harley-Davidson", "Street Bob", 700),
                 new Motorcycle("Kawasaki", "Ninja", 1000)
         );
-
-        vehicles.forEach(System.out::println);
+        Rental rental = new Rental(vehicles.get(0),1000);
+        System.out.println("rental.toString() = " + rental.toString());
+        //vehicles.forEach(System.out::println);
     }
 }

@@ -1,6 +1,8 @@
 package opgave03.models.vehicles;
 
-public abstract class Vehicle {
+import opgave03.models.VehicleComponet;
+
+public abstract class Vehicle extends VehicleComponet {
     private String make;
     private String model;
 
